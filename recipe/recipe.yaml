@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.0.3"
+  version: "0.0.4"
 
 package:
   name: pymu-eval
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/p/pymu-eval/pymu_eval-${{ version }}.tar.gz
-  sha256: dbceead129ac44d3b55e999516d5677435bafd3b4a9864db20e15dd1741daaba
+  sha256: 5368edf2a1c5577a5358d6a9bd0990160e63a543d6082578ac5e8ff585554a57
 
 build:
   number: 0
@@ -34,14 +34,14 @@ tests:
         - pymu_eval
       pip_check: true
   - script:
-       - pytest -v tests
+      - pytest -v tests
     requirements:
       run:
-         - python ${{ python_min }}.*
-         - pytest
+        - python ${{ python_min }}.*
+        - pytest
     files:
-       source:
-         - tests
+      source:
+        - tests
 
 
 about:
